@@ -1,1 +1,1 @@
-# prspreadsheetstats
+# BC-PR-Stats-Updater
