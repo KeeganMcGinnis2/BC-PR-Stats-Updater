@@ -1,18 +1,18 @@
-Fauxhebro	/
-Espi	/
-Elliot	2-0 (100%)
-RK	3-1 (75%)
-Maknae	/
-Shon	1-0 (100%)
-Webwipe	0-3 (0%)
-Polo	3-2 (60%)
-Shmugs	/
-Pines	/
-Unruly	/
-MojoMonkey	/
-Thomas	/
-BO10	0-1 (0%)
-Zilo	/
-Bor	/
-Amrak	1-3 (25%)
-Pasta	/
+Fauxhebro	/	/
+Espi	/	/
+Elliot	2-0 (100%)	1-0-0 (100%)
+RK	3-1 (75%)	2-0-0 (100%)
+Maknae	/	/
+Shon	1-0 (100%)	1-0-0 (100%)
+Webwipe	0-3 (0%)	0-3-0 (0%)
+Polo	3-2 (60%)	2-1-0 (~67%)
+Shmugs	/	/
+Pines	/	/
+Unruly	/	/
+MojoMonkey	/	/
+Thomas	/	/
+BO10	0-1 (0%)	0-1-0 (0%)
+Zilo	/	/
+Bor	/	/
+Amrak	1-3 (25%)	1-2-0 (~33%)
+Pasta	/	/

@@ -11,20 +11,51 @@ def setStats(player_stats):
                 wins += int(record[0])
                 losses += int(record[1])
 
-        if (wins != 0 or losses != 0):
+        if wins != 0 or losses != 0:
             percent = (wins / (wins + losses)) * 100
-            if (round(percent) == percent):
+            if round(percent) == percent:
                 percent = ' (' + str(round(percent)) + '%)'
 
             else:
                 percent = ' (~' + str(round(percent)) + '%)'
-                
+
             set_stats.append(str(wins) + '-' + str(losses) + percent)
 
         else: 
             set_stats.append('/')
 
     return set_stats
+
+def recordStats(player_stats):
+    record_stats = []
+    for player in player_stats:
+        wins, losses, ties = 0, 0, 0
+        for record in player:
+            if record != None:
+                record = record.split('-')
+                if int(record[0]) > int(record[1]):
+                    wins += 1
+
+                elif int(record[0]) < int(record[1]):
+                    losses += 1
+
+                else:
+                    ties += 1
+        
+        if wins != 0 or losses != 0 or ties != 0:
+            percent = (wins / (wins + losses)) * 100
+            if round(percent) == percent:
+                percent = ' (' + str(round(percent)) + '%)'
+
+            else:
+                percent = ' (~' + str(round(percent)) + '%)'
+
+            record_stats.append(str(wins) + '-' + str(losses) + '-' + str(ties) + percent) 
+    
+        else:
+            record_stats.append('/')
+
+    return record_stats
 
 filename = 'number_players.txt'
 f = open(filename, 'r')
@@ -51,8 +82,9 @@ for i in range(2, num_players + 2):
     records.append(player_record)
 
 set_stats = setStats(records)
+record_stats = recordStats(records)
 write_name = 'output.txt'
 f = open(write_name, 'w')
 for counter, player in enumerate(players):
-    f.write(player + '\t' + set_stats[counter] + '\n')
+    f.write(player + '\t' + set_stats[counter] + '\t' + record_stats[counter] + '\n')
 f.close()
